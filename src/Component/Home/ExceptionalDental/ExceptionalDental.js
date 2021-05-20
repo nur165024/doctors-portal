@@ -7,7 +7,7 @@ const ExceptionalDental = () => {
         <section id="ExceptionalDental">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-5">
+                    <div className="col-md-5 offset-md-1">
                         <img src={ExceptionalDentalImage} alt="" className="img-fluid" />
                     </div>
                     <div className="col-md-6 align-self-center">
