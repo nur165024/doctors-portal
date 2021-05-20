@@ -1,4 +1,5 @@
 import React from 'react';
+import ExceptionalDental from '../ExceptionalDental/ExceptionalDental';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
 import './Home.css';
@@ -8,6 +9,7 @@ const Home = () => {
         <section>
             <Header></Header>
             <Services></Services>
+            <ExceptionalDental></ExceptionalDental>
         </section>
     );
 };
