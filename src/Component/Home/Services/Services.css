@@ -1,0 +1,11 @@
+#services{
+    padding: 50px 0;
+}
+.services-header-text h5{
+    color: #1CC7C1;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.services-header-text h2{
+    text-transform: capitalize;
+}
