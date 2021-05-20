@@ -1,4 +1,5 @@
 import React from 'react';
+import Appointment from '../Appointment/Appointment';
 import ExceptionalDental from '../ExceptionalDental/ExceptionalDental';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
@@ -10,6 +11,7 @@ const Home = () => {
             <Header></Header>
             <Services></Services>
             <ExceptionalDental></ExceptionalDental>
+            <Appointment></Appointment>
         </section>
     );
 };
