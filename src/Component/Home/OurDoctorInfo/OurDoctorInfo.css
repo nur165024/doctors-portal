@@ -1,0 +1,13 @@
+.doctorInfo{
+    text-align: center;
+}
+.doctorInfo h5{
+    margin-top: 20px;
+}
+.doctorInfo p span{
+    margin-left: 10px;;
+}
+.font-icon-doctor{
+    color: #1CC7C1;
+    font-size: 15px
+}

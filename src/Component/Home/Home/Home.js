@@ -3,6 +3,7 @@ import Appointment from '../Appointment/Appointment';
 import ExceptionalDental from '../ExceptionalDental/ExceptionalDental';
 import Header from '../Header/Header';
 import OurBlog from '../OurBlog/OurBlog';
+import OurDoctor from '../OurDoctor/OurDoctor';
 import Services from '../Services/Services';
 import Testimonial from '../Testimonial/Testimonial';
 import './Home.css';
@@ -16,6 +17,7 @@ const Home = () => {
             <Appointment></Appointment>
             <Testimonial></Testimonial>
             <OurBlog></OurBlog>
+            <OurDoctor></OurDoctor>
         </section>
     );
 };
