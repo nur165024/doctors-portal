@@ -1,5 +1,6 @@
 import React from 'react';
 import Appointment from '../Appointment/Appointment';
+import ContactUs from '../ContactUs/ContactUs';
 import ExceptionalDental from '../ExceptionalDental/ExceptionalDental';
 import Header from '../Header/Header';
 import OurBlog from '../OurBlog/OurBlog';
@@ -18,6 +19,7 @@ const Home = () => {
             <Testimonial></Testimonial>
             <OurBlog></OurBlog>
             <OurDoctor></OurDoctor>
+            <ContactUs></ContactUs>
         </section>
     );
 };
