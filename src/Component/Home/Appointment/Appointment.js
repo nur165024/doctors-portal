@@ -7,10 +7,10 @@ const Appointment = () => {
         <section id="appoinment">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-5 offset-md-1">
+                    <div className="doctor-image col-md-5 offset-md-1">
                         <img src={DoctorImage} alt="" className="img-fluid" />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 align-self-center">
                         <div className="appointment-text-content">
                             <h5>Appointment</h5>
                             <h2>Make an appoinment <br /> Today</h2>
