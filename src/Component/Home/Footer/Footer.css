@@ -1,0 +1,41 @@
+#footer{
+    margin: 60px 0;
+}
+ul,ol{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footerLink ul li a{
+    text-decoration: none;
+    color: #3A4256;
+    font-size: 14px;
+    font-weight: 600;
+}
+.footerLink h5{
+    color: #1CC7C1;
+    font-weight: 700;
+}
+.footerLink p{
+    color: #3A4256;
+}
+.contact-number p{
+    color: #3A4256;
+}
+.social-media-icon{
+    margin: 40px 0;
+}
+.social-media-icon svg{
+    width: 40px;
+    height: 40px;
+    padding: 10px 7px;
+    margin-right: 10px;
+    color: #1CC7C1;
+    border: 1px solid #1CC7C1;
+    border-radius: 50%;
+    transition: .3s ease-in;
+}
+.social-media-icon svg:hover{
+    color: #fff;
+    background-color: #1CC7C1;
+}

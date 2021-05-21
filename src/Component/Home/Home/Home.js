@@ -2,6 +2,7 @@ import React from 'react';
 import Appointment from '../Appointment/Appointment';
 import ContactUs from '../ContactUs/ContactUs';
 import ExceptionalDental from '../ExceptionalDental/ExceptionalDental';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import OurBlog from '../OurBlog/OurBlog';
 import OurDoctor from '../OurDoctor/OurDoctor';
@@ -20,6 +21,7 @@ const Home = () => {
             <OurBlog></OurBlog>
             <OurDoctor></OurDoctor>
             <ContactUs></ContactUs>
+            <Footer></Footer>
         </section>
     );
 };
