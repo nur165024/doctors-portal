@@ -10,7 +10,7 @@ const TestimonialInfo = ({testInfo}) => {
             </div>
             <div className="d-flex align-items-center">
                 <div className="dp-user-image">
-                    <img src={image} alt="" />
+                    <img src={image} alt="" className="img-fluid" />
                 </div>
                 <div>
                     <h4 style={{ textTransform:"capitalize" }}>{name}</h4>
