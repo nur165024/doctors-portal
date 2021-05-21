@@ -3,6 +3,7 @@ import Appointment from '../Appointment/Appointment';
 import ExceptionalDental from '../ExceptionalDental/ExceptionalDental';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
+import Testimonial from '../Testimonial/Testimonial';
 import './Home.css';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Services></Services>
             <ExceptionalDental></ExceptionalDental>
             <Appointment></Appointment>
+            <Testimonial></Testimonial>
         </section>
     );
 };
