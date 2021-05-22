@@ -1,0 +1,11 @@
+.timeAppointmentContent{
+    margin: 40px 0;
+    text-align: center;
+}
+.timeAppointmentContent h3{
+    color: #1CC7C1;
+    font-size: 25px;
+}
+.timeAppointmentContent h5{
+    color: #3A4256;
+}
