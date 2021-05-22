@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Appointment from "./Component/Appointment/Appointment/Appointment";
 import Home from "./Component/Home/Home/Home";
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home></Home>
+        </Route>
+        <Route path="/appointment">
+          <Appointment></Appointment>
         </Route>
       </Switch>
     </Router>

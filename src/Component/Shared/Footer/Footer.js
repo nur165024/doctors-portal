@@ -90,9 +90,15 @@ const Footer = () => {
                             <p>New York - 101010 Hudson Yards</p>
                         </div>
                         <div className="social-media-icon">
-                            <FaFacebookF className="iconssocialmedia" />
-                            <FaGooglePlusG className="iconssocialmedia" />
-                            <FaTwitter className="iconssocialmedia" />
+                            <a href="javascript:void(0);">
+                                <FaFacebookF className="iconssocialmedia" />
+                            </a>
+                            <a href="javascript:void(0);">
+                                <FaGooglePlusG className="iconssocialmedia" />
+                            </a>
+                            <a href="javascript:void(0);">
+                                <FaTwitter className="iconssocialmedia" />
+                            </a>
                         </div>
                         <div className="contact-number">
                             <p>Call Now</p>
