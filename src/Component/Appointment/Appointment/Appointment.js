@@ -1,11 +1,11 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
-import NavBar from '../../Shared/NavBar/NavBar';
+import HeaderAppointment from '../HeaderAppointment/HeaderAppointment';
 
 const Appointment = () => {
     return (
         <>
-            <NavBar></NavBar>
+            <HeaderAppointment></HeaderAppointment>
             <Footer></Footer>
         </>
     );
