@@ -22,7 +22,7 @@ const TimeAppointmentInfo = ({timeData}) => {
                 <h5>{date}</h5>
                 <p className="text-secondary">{spaces}</p>
                 <button onClick={openModal} className="btn btn-primary btn-setColor">Book Appointment</button>
-                <ModalAppointment title={name} closeModal={closeModal} modalIsOpen={modalIsOpen}></ModalAppointment>
+                <ModalAppointment title={name} date={date} closeModal={closeModal} modalIsOpen={modalIsOpen}></ModalAppointment>
             </div>
         </div>
     );

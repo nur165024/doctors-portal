@@ -15,10 +15,28 @@ const customStyles = {
 
 Modal.setAppElement('#root')
 
-const ModalAppointment = ({modalIsOpen,closeModal,title}) => {
+const ModalAppointment = ({modalIsOpen,closeModal,title,date}) => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        data.service= title;
+        data.date = date;
+        data.created_at = new Date();
+
+        fetch('http://localhost:5000/appointment/store',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body : JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(success => {
+            if (success) {
+                closeModal()
+                alert('Appointment Created Successfully!');    
+            }
+        })
+        
+    };
 
     return (
         <div>
