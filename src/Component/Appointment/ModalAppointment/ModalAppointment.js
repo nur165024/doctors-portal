@@ -32,7 +32,7 @@ const ModalAppointment = ({modalIsOpen,closeModal,title,date}) => {
         .then(success => {
             if (success) {
                 closeModal()
-                alert('Appointment Created Successfully!');    
+                alert('Appointment Created Successfully!');
             }
         })
         
@@ -50,6 +50,7 @@ const ModalAppointment = ({modalIsOpen,closeModal,title,date}) => {
                 <div className="">
                     <div className="modal-header">
                         <h5 style={{color : '#1CC7C1'}} className="modal-title">{title}</h5>
+                        <p className="text-secondary">{date}</p>
                         <button onClick={closeModal} type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -72,7 +73,7 @@ const ModalAppointment = ({modalIsOpen,closeModal,title,date}) => {
                             </div>
                             <div className="form-row">
                                 <div className="form-group col-md-4">
-                                    <select id="gender" {...register("gender")} name="gender" id="gender" className="form-control">
+                                    <select id="gender" {...register("gender")} name="gender" className="form-control">
                                         <option value=" " selected>Gender...</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
@@ -80,7 +81,7 @@ const ModalAppointment = ({modalIsOpen,closeModal,title,date}) => {
                                     <p className="text-danger">{errors.gender && "Gender is required"}</p>
                                 </div>
                                 <div className="form-group col-md-4">
-                                    <input type="number" {...register('age',{required:true})} name="age" id="age" placeholder="Age" className="form-control" id="age" />
+                                    <input type="number" {...register('age',{required:true})} name="age" placeholder="Age" className="form-control" id="age" />
                                     <p className="text-danger">{errors.age && "Age is required"}</p>
                                 </div>
                                 <div className="form-group col-md-4">
