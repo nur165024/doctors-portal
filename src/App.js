@@ -10,6 +10,7 @@ import AdminPatient from "./Component/Dashboard/AdminPatient/AdminPatient";
 import AdminPrescription from "./Component/Dashboard/AdminPrescription/AdminPrescription";
 import Dashboard from "./Component/Dashboard/Dashboard/Dashboard";
 import Home from "./Component/Home/Home/Home";
+import Login from "./Component/Login/Login";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route path="/admin/prescription">
           <AdminPrescription></AdminPrescription>
+        </Route>
+        <Route path="/login">
+          <Login></Login>
         </Route>
       </Switch>
     </Router>

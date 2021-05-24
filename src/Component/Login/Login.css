@@ -1,0 +1,8 @@
+#userLogin{
+    height: 650px;
+    width: 100%;
+}
+#userLogin .form-control:focus{
+    box-shadow: none;
+    border-color: #1CC7C1;
+}
