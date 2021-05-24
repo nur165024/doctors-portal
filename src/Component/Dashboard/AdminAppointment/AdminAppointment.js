@@ -14,7 +14,7 @@ const AdminAppointment = () => {
                     <SideBar></SideBar>
                     
                     <div className="col-md-10">
-                        <h2 className="brand-color">Appointments</h2>
+                        <h2 className="brand-color my-3">Appointments</h2>
                         <div className="row mt-5">
                             <div className="col-md-3">
                                 <Calendar 

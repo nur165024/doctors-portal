@@ -16,7 +16,7 @@ const SideBar = () => {
                             <Link to="/admin/appointment"><FontAwesomeIcon icon={faCalendar} /> Appointment</Link>
                         </li>
                         <li>
-                            <Link to="#"><FontAwesomeIcon icon={faUserFriends} /> Patients</Link>
+                            <Link to="/admin/patient"><FontAwesomeIcon icon={faUserFriends} /> Patients</Link>
                         </li>
                         <li>
                             <Link to="#"><FontAwesomeIcon icon={faFileAlt} /> Prescriptions</Link>
