@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SideBar from '../SideBar/SideBar';
 import './AdminPrescription.css';
+import PrescriptionList from './PrescriptionList';
 
 const AdminPrescription = () => {
+    const [prescription,setPrescription] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/appointment/list')
+        .then(res => res.json())
+        .then(data => setPrescription(data))
+    },[])
+
     return (
         <section>
             <div className="container-fluid">
@@ -25,20 +34,9 @@ const AdminPrescription = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                             <td>30-03-2021</td>
-                                            <td>Alam Khan</td>
-                                            <td>+88015855658</td>
-                                            <td><button className="btn btn-primary btn-setColor">View</button></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>30-03-2021</td>
-                                            <td>Alam Khan</td>
-                                            <td>+88017855658</td>
-                                            <td><button className="btn btn-primary btn-setColor">View</button></td>
-                                        </tr>
+                                        {
+                                            prescription.map((dataTest,index) => <PrescriptionList key={dataTest._id} index={index + 1 } list={dataTest}></PrescriptionList>)
+                                        }
                                     </tbody>
                                 </table>
                             </div>

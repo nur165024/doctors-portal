@@ -3,12 +3,12 @@ import SideBar from '../SideBar/SideBar';
 import PatientList from './PatientList';
 
 const AdminPatient = () => {
-    const [appointmentList,setAppointmentList] = useState([])
+    const [patient,setPatient] = useState([])
     
     useEffect(() => {
         fetch('http://localhost:5000/appointment/list')
         .then(res => res.json())
-        .then(data => setAppointmentList(data))
+        .then(data => setPatient(data))
     },[])
 
     return (
@@ -36,7 +36,7 @@ const AdminPatient = () => {
                                     </thead>
                                     <tbody>
                                         {
-                                            appointmentList.map((dataTest,index) => <PatientList key={dataTest._id} index={index + 1 } list={dataTest}></PatientList>)
+                                            patient.map((dataTest,index) => <PatientList key={dataTest._id} index={index + 1 } list={dataTest}></PatientList>)
                                         }
                                     </tbody>
                                 </table>
