@@ -6,6 +6,11 @@ import './AdminAppointment.css';
 
 const AdminAppointment = () => {
     const [date,setDate] = useState(new Date());
+    
+    const handleDate = (data) => {
+        setDate(data)
+        console.log(data);
+    }
 
     return (
         <section>
@@ -18,8 +23,8 @@ const AdminAppointment = () => {
                         <div className="row mt-5">
                             <div className="col-md-3">
                                 <Calendar 
-                                    onChange={setDate}
-                                    value={date}
+                                    onChange={handleDate}
+                                    value={new Date()}
                                 />
                             </div>
                             <div className="col-md-9">

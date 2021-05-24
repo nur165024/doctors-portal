@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SideBar from '../SideBar/SideBar';
+import PatientList from './PatientList';
 
 const AdminPatient = () => {
+    const [appointmentList,setAppointmentList] = useState([])
+    
+    useEffect(() => {
+        fetch('http://localhost:5000/appointment/list')
+        .then(res => res.json())
+        .then(data => setAppointmentList(data))
+    },[])
+
     return (
         <section>
             <div className="container-fluid">
@@ -26,24 +35,9 @@ const AdminPatient = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Alam Khan</td>
-                                            <td>Male</td>
-                                            <td>30</td>
-                                            <td>60 kg</td>
-                                            <td>+88015855658</td>
-                                            <td>Panthopath, Green Road, Dhaka-1205.</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Alam Khan</td>
-                                            <td>Female</td>
-                                            <td>25</td>
-                                            <td>60 kg</td>
-                                            <td>+88017855658</td>
-                                            <td>Panthopath, Green Road, Dhaka-1205.</td>
-                                        </tr>
+                                        {
+                                            appointmentList.map((dataTest,index) => <PatientList key={dataTest._id} index={index + 1 } list={dataTest}></PatientList>)
+                                        }
                                     </tbody>
                                 </table>
                             </div>
