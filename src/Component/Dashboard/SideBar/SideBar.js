@@ -13,7 +13,7 @@ const SideBar = () => {
                             <Link to="/admin/dashboard"><FontAwesomeIcon icon={faTh} /> Dashboard</Link>
                         </li>
                         <li>
-                            <Link to="#"><FontAwesomeIcon icon={faCalendar} /> Appointment</Link>
+                            <Link to="/admin/appointment"><FontAwesomeIcon icon={faCalendar} /> Appointment</Link>
                         </li>
                         <li>
                             <Link to="#"><FontAwesomeIcon icon={faUserFriends} /> Patients</Link>
