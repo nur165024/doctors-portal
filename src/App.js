@@ -7,6 +7,7 @@ import {
 import Appointment from "./Component/Appointment/Appointment/Appointment";
 import AdminAppointment from "./Component/Dashboard/AdminAppointment/AdminAppointment";
 import AdminPatient from "./Component/Dashboard/AdminPatient/AdminPatient";
+import AdminPrescription from "./Component/Dashboard/AdminPrescription/AdminPrescription";
 import Dashboard from "./Component/Dashboard/Dashboard/Dashboard";
 import Home from "./Component/Home/Home/Home";
 
@@ -28,6 +29,12 @@ function App() {
         </Route>
         <Route path="/admin/patient">
           <AdminPatient></AdminPatient>
+        </Route>
+        <Route path="/admin/patient">
+          <AdminPatient></AdminPatient>
+        </Route>
+        <Route path="/admin/prescription">
+          <AdminPrescription></AdminPrescription>
         </Route>
       </Switch>
     </Router>

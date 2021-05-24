@@ -19,7 +19,7 @@ const SideBar = () => {
                             <Link to="/admin/patient"><FontAwesomeIcon icon={faUserFriends} /> Patients</Link>
                         </li>
                         <li>
-                            <Link to="#"><FontAwesomeIcon icon={faFileAlt} /> Prescriptions</Link>
+                            <Link to="/admin/prescription"><FontAwesomeIcon icon={faFileAlt} /> Prescriptions</Link>
                         </li>
                         <li>
                             <Link to="#"><FontAwesomeIcon icon={faCogs} /> Setting</Link>

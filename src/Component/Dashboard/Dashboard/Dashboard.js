@@ -69,7 +69,7 @@ const Dashboard = () => {
                                             <td>4.00 PM</td>
                                             <td>Karim Khan</td>
                                             <td>+88017855658</td>
-                                            <td><button className="btn btn-light">View</button></td>
+                                            <td><button className="btn btn-light">Not Added</button></td>
                                             <td><button className="btn btn-danger">Cancelled</button></td>
                                         </tr>
                                     </tbody>
