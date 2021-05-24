@@ -1,0 +1,21 @@
+.borderless td,.borderless tbody td, .borderless th, .borderless thead th {
+    border: none;
+}
+.menuBar{
+    background: rgb(24,210,175);
+    background: linear-gradient(180deg, rgba(24,210,175,1) 0%, rgba(15,207,234,1) 100%);
+}
+.menuBar ul li{
+    padding: 20px;
+}
+.menuBar ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+p,ul,ol,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+.brand-color{
+    color: #1CC7C1;
+}
