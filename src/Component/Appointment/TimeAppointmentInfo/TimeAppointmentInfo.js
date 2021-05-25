@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ModalAppointment from '../ModalAppointment/ModalAppointment';
 import './TimeAppointmentInfo.css';
 
-const TimeAppointmentInfo = ({timeData}) => {
+const TimeAppointmentInfo = ({timeData,newDate}) => {
     const {name,date,spaces} = timeData;
 
     const [modalIsOpen,setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const TimeAppointmentInfo = ({timeData}) => {
                 <h5>{date}</h5>
                 <p className="text-secondary">{spaces}</p>
                 <button onClick={openModal} className="btn btn-primary btn-setColor">Book Appointment</button>
-                <ModalAppointment title={name} date={date} closeModal={closeModal} modalIsOpen={modalIsOpen}></ModalAppointment>
+                <ModalAppointment title={name} newDate={newDate} closeModal={closeModal} modalIsOpen={modalIsOpen}></ModalAppointment>
             </div>
         </div>
     );

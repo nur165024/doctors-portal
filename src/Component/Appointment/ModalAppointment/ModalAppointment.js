@@ -15,12 +15,12 @@ const customStyles = {
 
 Modal.setAppElement('#root')
 
-const ModalAppointment = ({modalIsOpen,closeModal,title,date}) => {
-
+const ModalAppointment = ({modalIsOpen,closeModal,title,newDate}) => {
+    console.log(newDate);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         data.service= title;
-        data.date = date;
+        data.date = newDate;
         data.created_at = new Date();
 
         fetch('http://localhost:5000/appointment/store',{
@@ -50,7 +50,7 @@ const ModalAppointment = ({modalIsOpen,closeModal,title,date}) => {
                 <div className="">
                     <div className="modal-header">
                         <h5 style={{color : '#1CC7C1'}} className="modal-title">{title}</h5>
-                        <p className="text-secondary">{date}</p>
+                        <p className="text-secondary">{new Date().toDateString(newDate)}</p>
                         <button onClick={closeModal} type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>

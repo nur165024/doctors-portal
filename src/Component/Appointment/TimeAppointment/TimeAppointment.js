@@ -52,7 +52,7 @@ const TimeAppointment = ({newDate}) => {
                 </div>
                 <div className="row">
                     {
-                        timeAppointMentData.map(timeData => <TimeAppointmentInfo key={timeData.id} timeData={timeData} ></TimeAppointmentInfo>)
+                        timeAppointMentData.map(timeData => <TimeAppointmentInfo key={timeData.id} newDate={newDate} timeData={timeData} ></TimeAppointmentInfo>)
                     }
                 </div>
             </div>
