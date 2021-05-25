@@ -3,13 +3,28 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import SideBar from '../SideBar/SideBar';
 import './AdminAppointment.css';
+import AdminAppointmentList from './AdminAppointmentList';
 
 const AdminAppointment = () => {
     const [date,setDate] = useState(new Date());
+    const [adminAppointment,setAdminAppointment] = useState([]);
     
-    const handleDate = (data) => {
-        setDate(data)
-        console.log(data);
+    const handleDate = (date) => {
+        setDate(date)
+        fetch('http://localhost:5000/appointmentByDate',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({date})
+        })
+        .then(res => res.json())
+        .then(data => setAdminAppointment(data))
+    }
+
+    let listAppointment;
+    if (adminAppointment.length !== 0) {
+        listAppointment = adminAppointment.map((appointment,index) => <AdminAppointmentList index={index + 1} key={appointment._id} appointment={appointment}></AdminAppointmentList>)
+    }else{
+        listAppointment = <tr><td className="text-center" colSpan="5">There no Result</td></tr>
     }
 
     return (
@@ -42,18 +57,7 @@ const AdminAppointment = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Alam Khan</td>
-                                            <td>3.00 PM</td>
-                                            <td><button className="btn btn-primary btn-setColor">Not Visited</button></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Karim Khan</td>
-                                            <td>4.00 PM</td>
-                                            <td><button className="btn btn-primary btn-setColor">Visited</button></td>
-                                        </tr>
+                                        {listAppointment}
                                     </tbody>
                                 </table>
                             </div>
