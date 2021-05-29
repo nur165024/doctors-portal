@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { faCalendar, faCogs, faFileAlt, faSignOutAlt, faTh, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faCogs, faFileAlt, faSignOutAlt, faHome, faTh, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SideBar = () => {
@@ -23,6 +23,9 @@ const SideBar = () => {
                         </li>
                         <li>
                             <Link to="#"><FontAwesomeIcon icon={faCogs} /> Setting</Link>
+                        </li>
+                        <li>
+                            <Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
                         </li>
                         <li>
                             <Link to="#"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</Link>

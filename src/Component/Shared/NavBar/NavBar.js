@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserLoginContext } from '../../../App';
 import './NavBar.css';
 
 const NavBar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserLoginContext);
+
+    let userLoginCheck;
+    if (loggedInUser.email) {
+        userLoginCheck = <li className="nav-item">
+                            <Link className="nav-link mr-5" to="/admin/dashboard">Dashboard</Link>
+                        </li>
+    }else{
+        userLoginCheck = <li className="nav-item">
+                            <Link className="nav-link mr-5" to="/login">Login</Link>
+                        </li>
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,12 +36,10 @@ const NavBar = () => {
                     <li className="nav-item">
                         <Link className="nav-link mr-5" to="/">Reviews</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link mr-5" to="/">Blog</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link mr-5" to="/">Contact Us</Link>
-                    </li>
+                    
+                    {
+                        userLoginCheck
+                    }
                 </ul>
             </div>
         </nav>
