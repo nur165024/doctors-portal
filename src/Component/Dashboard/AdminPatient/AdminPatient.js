@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import SideBar from '../SideBar/SideBar';
 import PatientList from './PatientList';
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 const AdminPatient = () => {
     const [patient,setPatient] = useState([])
-    
+    let [scaleLoader, setScaleLoader] = useState(true);
+
     useEffect(() => {
         fetch('http://localhost:5000/appointment/list')
         .then(res => res.json())
@@ -35,6 +38,11 @@ const AdminPatient = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {
+                                            patient.length === 0 &&  <div className="sweet-loading" style={{position:"relative",left:"100%"}}>
+                                                                        <ClipLoader loading={scaleLoader} size={100} />
+                                                                    </div>
+                                        }
                                         {
                                             patient.map((dataTest,index) => <PatientList key={dataTest._id} index={index + 1 } list={dataTest}></PatientList>)
                                         }

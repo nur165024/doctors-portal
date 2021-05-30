@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import SideBar from '../SideBar/SideBar';
 import './AdminPrescription.css';
 import PrescriptionList from './PrescriptionList';
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 const AdminPrescription = () => {
     const [prescription,setPrescription] = useState([])
+    let [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('http://localhost:5000/appointment/list')
@@ -34,6 +37,11 @@ const AdminPrescription = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {
+                                            prescription.length === 0 && <div className="sweet-loading" style={{position:"relative",left:"100%"}}>
+                                                                            <ClipLoader loading={loading} size={100} />
+                                                                        </div>
+                                        }
                                         {
                                             prescription.map((dataTest,index) => <PrescriptionList key={dataTest._id} index={index + 1 } list={dataTest}></PrescriptionList>)
                                         }
